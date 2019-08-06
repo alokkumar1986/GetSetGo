@@ -22,10 +22,11 @@ $rs   = $student_data;
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Online Test Teacher Control</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+  <link rel="shortcut icon" href="../../../img/favicon.ico" />
   <link href="../../css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../../css/style2.css">
   
@@ -213,7 +214,7 @@ $(window).load(function(){
 
 
     <div class="col-sm-10">
-
+       <?php if($page!=""){ include("$page.php"); }else { ?>
 
      <div class="row">
       <div class="col-sm-3 p0">
@@ -280,7 +281,7 @@ $(window).load(function(){
 </div>
 
 
-
+<?php } ?>
 </div>
 </div>
 </div>
