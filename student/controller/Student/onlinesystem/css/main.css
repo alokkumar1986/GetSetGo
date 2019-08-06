@@ -1,0 +1,14 @@
+
+
+.pbar .ui-progressbar-value {display:block !important}
+.pbar {overflow: hidden;
+}
+.percent {position:relative;text-align: right;
+padding:0px 15px;
+}
+.elapsed {position:relative;text-align: right;
+padding:0px 15px;
+font: 15px arial, serif;
+
+	
+}

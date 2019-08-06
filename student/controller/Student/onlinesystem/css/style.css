@@ -1,0 +1,160 @@
+/*
+	 CSS-Tricks Example
+	 by Chris Coyier
+	 http://css-tricks.com
+*/
+
+*{
+font-family: Arial;
+/*font-size:14px;*/
+}
+
+body { font: 12px arial, serif;
+
+background-color:#fff; 
+
+}
+a
+{
+text-decoration: none;
+color:black;
+}
+#home
+{
+width:950px;
+background:#F5F5F5;
+padding:5px;
+margin:0px auto 1px auto;
+border: 1px solid #ddd;
+
+	box-shadow: 0 0 10px #ddd;
+	-moz-box-shadow: 0 0 10px #ddd;
+	-webkit-box-shadow: 0 0 10px #ddd;
+	-khtml-box-shadow: 0 0 10px #ddd;
+
+}
+#page-wrap { 
+
+  }
+.Question { color: black; text-align: left;  width: 98%; 
+height: 510px;
+display:none;
+	margin: 2px 2px 2px 2px;
+	padding:10px;
+background-color:#EEEEEE;
+	border: 1px solid #ddd;
+ 
+	box-shadow: 0 0 10px #ddd;
+	-moz-box-shadow: 0 0 10px #ddd;
+	-webkit-box-shadow: 0 0 10px #ddd;
+	-khtml-box-shadow: 0 0 10px #ddd;
+
+}
+.mreview { color: white; text-align: center; background: #336699; width: 110px; height: 20px;
+padding:2px;
+float: left;
+border: 1px solid #ffffff;
+ }
+
+.review {  text-align: center;  width: 33px; height: 30px;
+background-image:url(../img/not_visited.png);
+background-repeat:no-repeat;
+padding-top:6px;
+float: left;
+display:none;
+margin:2px;
+
+	cursor: pointer;
+
+ }
+ .review {  text-align: center;  width: 33px; height: 30px;
+background-image:url(../img/not_visited.png);
+background-repeat:no-repeat;
+padding-top:6px;
+float: left;
+display:none;
+margin:2px;
+
+	cursor: pointer;
+
+ }
+ 
+
+p { margin: 0 0 15px 0; }
+h1 { margin: 5px 0; }
+#footer { height: 100px; color: black; text-align: center; background: #cbcbcb; width: 100%; 
+opacity:0.75;
+filter:alpha(opacity=75);
+}
+#fixedBar {
+position: absolute;
+
+float:right;
+buttom: 0; left: 100;
+
+z-index: 10;
+
+background:#ffc;
+
+padding:5px;
+
+border:1px solid #CCCCCC;
+
+text-align:left;
+
+font-weight:bold;
+
+width:50%;
+
+}
+.button2
+{
+background-color:#99FF66;
+font-weight:bold;
+cursor:pointer;
+color:#CC0000;
+width:60px;
+padding:8px;
+border: 1px solid #ccc;
+	
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+.button2:hover
+{
+background-color:#00FF00;
+
+}
+input, textarea, select {
+	background: #fff url('img/bg_input.png') repeat-x bottom left;
+	font-family: Helvetica, Arial;
+	font-size: 12px;
+	padding: 6px;
+	border: 1px solid #ccc;
+	
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+#att
+{
+
+font-size:12px;
+padding:5px;
+margin:5px;
+background-color:#009900;
+color:#FFFFFF;
+
+
+}
+#natt
+{
+font-size:12px;
+padding:5px;
+margin:5px;
+background-color:#CC0033;
+color:#FFFFFF;
+}

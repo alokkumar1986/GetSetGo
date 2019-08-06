@@ -1,0 +1,12 @@
+Question,Option 1,Option 2,Option 3,Option 4,Option 5,Answer,Difficulty Level,Explanation
+"The captain of a cricket team of 11 members is 26 years old and the wicket keeper is 3 years older. If the ages of these two are excluded, the average age of the remaining players is one year less than the average age of the whole team. What is the average age of the team?",23 years,24 years,25 years,None of these,,1,easy,Let the average age of the whole team by x years.
+,,,,,,,,
+,,,,,,,,11x - (26 + 29) = 9(x -1)
+,,,,,,,,
+,,,,,,,,11x - 9x = 46
+,,,,,,,,
+,,,,,,,,2x = 46
+,,,,,,,,
+,,,,,,,,x = 23.
+,,,,,,,,
+,,,,,,,,"So, average age of the team is 23 years."

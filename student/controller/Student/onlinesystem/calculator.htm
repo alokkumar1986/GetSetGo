@@ -1,0 +1,668 @@
+<style type="text/css">
+    .NCPbtn{
+		color: #E5EAF0;
+		font-family: Arial;
+		font-size: x-small;
+		font-style: normal;
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+		background-color: #466CA3;
+		border-style: outset;	
+	}
+	.tdoutliner{
+		border-left-color : #0A0084;
+		border-left-style : solid;
+		border-left-width : 3px;
+		border-bottom-color : #0A0084;
+		border-bottom-style : solid;
+		border-bottom-width : 3px;
+		border-right-color : #0A0084;
+		border-right-style : solid;
+		border-right-width : 3px;
+		border-top-color : #0A0084;
+		border-top-style : solid;
+		border-top-width : 3px
+	}
+	.tdErrortitle {
+		font-family: Arial,Verdana,sans-serif; 
+		font-size: 15px; 
+		font-weight:bold; 
+		margin-left: 3px;
+		color:#FFFFFF;
+		background-color: #395f9b	
+	}
+	.tdErrordata {
+		font-family: Arial,Verdana,sans-serif;  
+		font-size: 12px; 
+		margin-left: 3px;
+		color:#0A0084
+	}
+	.tdDebugdata {
+		font-family: Arial,Verdana,sans-serif; 
+		font-size: 11px; 
+		margin-left: 3px;
+		color:#0A0084
+}
+
+
+
+.clear_button
+{
+    width:32px;
+    background-color: #fff;
+    font-family: Futura;
+    font-size: 20px;
+    color: #464646;
+    text-align: center;
+    border: 1px solid #ccc;
+   
+}
+.result_box
+{
+    font-weight:bold;
+    color:red;
+    FONT-SIZE: 14pt;
+    HEIGHT: 13px !important;
+    WIDTH: 150px
+}
+.zadatak_box
+{
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold;
+    HEIGHT: 13px !important;
+    WIDTH: 150px;
+}
+.main_table
+{
+   width: 220px;
+
+}
+.main_table tr
+{
+margin:0px !important;
+}
+.small_button
+{
+    border: 1px solid #ccc;
+    font-family: Arial;    
+    background-color: #fff;
+    font-size: 5px !imporatnt;
+    text-align: center;
+    width: 35px;
+    height: 30px;
+}
+.enter_button
+{
+     border: 1px solid #ccc;
+    background-color: #fff;
+    height: 32px;
+    width: 30px;
+}
+.cal_Shadow
+{
+    border: none;
+    background-color: #fff;
+    height: 25px;
+    width: 220px;
+}
+.main_tableshadow
+{
+    border-top: 1px dotted #000;
+} 
+#izaZareza{
+height:30px !important;
+}	
+</style>
+        <script type="text/javascript">
+            var broj = "0"
+            var tocka = 0
+            var eksp = 0
+            var eksponent = 3
+            var rjesenje = 0
+            var decimala = 0
+            var enter = "";
+            function memory(operator) {
+                document.getElementById("zadatak").focus();
+                if (operator == 1) {		// MS
+                    document.getElementById("memorija").value = document.getElementById("rezultat").value
+                }
+                else if (operator == 2)	{	// MR
+                    var memorija = document.getElementById("memorija").value;
+                    if (memorija==0 || slovo(memorija.charAt(0)))
+                    {
+                        // alert("yes");
+                        memorija = ""
+                    };
+                    document.getElementById("zadatak").value += memorija
+                }
+                else if (operator == 3) {
+
+                    if (document.getElementById("zadatak").value == "") {
+                        document.getElementById("rezultat").value = "";
+                    }
+                    else {
+                        document.getElementById("zadatak").value = "";
+                    }
+                }
+            }
+            function display(noviznak) {
+                if (noviznak=="")
+                {document.getElementById("zadatak").focus()}
+                else
+                {document.getElementById("rezultat").select()}
+            }
+            function dodajBroj(noviznak) {
+                //   alert("in value "+document.getElementById("racunalo").document.getElementById("zadatak").focus());
+                document.getElementById("zadatak").focus();
+                document.getElementById("zadatak").value += noviznak
+            }
+            function izracunaj(zarez) {
+                var pitanje = "";
+                var mem = 0;
+                if (zarez >= 1) {
+                    if (document.getElementById("zadatak").value == "") {
+                        broj = document.getElementById("rezultat").value;
+                    }
+                    else {
+
+                        broj = document.getElementById("zadatak").value;
+
+                        if (ubacirezultat(broj.charAt(0))) {
+                            broj = document.getElementById("rezultat").value + broj;
+                        }
+                    }
+                }
+                for (var i=0; i<broj.length; i++) {
+                    if (broj.charAt(i) == ",") {pitanje += "."}
+                    else if (broj.charAt(i) == " ") {}
+                    else {pitanje += broj.charAt(i)}
+                }
+
+                if (operator(broj.charAt(broj.length-1))) {return false};
+                pitanje = eval("1*" + pitanje);
+
+                if (zarez > 1) {
+
+                    pitanje = matematika(zarez, pitanje);
+                }
+
+                document.getElementById("oldrezultat").value = pitanje;
+
+                zaokruzi(pitanje);
+                document.getElementById("zadatak").value = "";
+                document.getElementById("zadatak").focus();
+            }
+
+
+            function matematika(zarez, rjesenje) {
+                with (Math)
+                {
+
+                    if (zarez == 2) {
+                        rjesenje = pow(rjesenje, 2);
+                    }
+                    else if (zarez == 3) {
+                        rjesenje = sqrt(rjesenje);
+                    }
+                    else if (zarez == 4) {
+                        rjesenje = -rjesenje;
+                    }
+                    else if (zarez == 5) {
+                        rjesenje = log(rjesenje);
+                    }
+                    else if (zarez == 6) {
+                        rjesenje = pow(E, rjesenje);
+                    }
+                    else if (zarez == 7) {
+                        rjesenje = 1/rjesenje;
+                    }
+                    else if (zarez == 8) {
+                        rjesenje = log(rjesenje)/LN10;
+                    }
+                    else if (zarez == 9) {
+                        rjesenje = pow(10, rjesenje);
+                    }
+                    else if (zarez >= 10 && zarez <= 12) {
+                        if (zarez == 10) {
+                            rjesenje = atan(rjesenje)
+                        }
+                        else if (zarez == 11) {
+                            rjesenje = acos(rjesenje)
+                        }
+                        else if (zarez == 12) {
+                            rjesenje = asin(rjesenje)
+                        }
+
+                        if (document.getElementById("stupnjevi1").checked) {rjesenje = (rjesenje * 180) / PI}
+                    }
+                    else if (zarez >= 14 && zarez <= 16) {
+
+                        if (document.getElementById("stupnjevi1").checked)
+
+                        {
+                            radijani = (rjesenje / 180) * PI}
+                        else
+                        {
+                            radijani = rjesenje;
+                        }
+
+                        if (zarez == 14) {
+                            rjesenje = tan(radijani);
+                        }
+                        else if (zarez == 15) {
+                            rjesenje = cos(radijani);
+                        }
+                        else if (zarez == 16) {
+                            rjesenje = sin(radijani);
+
+                        }
+                    }
+                    else if (zarez == 17) {
+                        rjesenje = rjesenje/100
+                    }
+                    else if (zarez == 18) {
+                        rjesenje = rjesenje/1000000
+                    }
+                    else if (zarez == 20) {
+                        rjesenje = factorial(rjesenje)
+                    }
+                    else if (zarez == 21) {
+                        eksponent = prompt("Please enter exponent", 3);
+                        rjesenje = pow(rjesenje, eksponent)
+                    }
+                    else if (zarez == 22) {
+                        eksponent = prompt("Please enter root", 3);
+                        rjesenje = pow(rjesenje, (1/eksponent))
+                    }
+                    return rjesenje
+
+                }
+            }
+
+
+            function zaokruzi(ebroj) {
+
+
+                decimala=parseFloat(document.getElementById('izaZareza').options[document.getElementById('izaZareza').selectedIndex].value);
+
+                var strbroj = ebroj + " ";
+                if (strbroj.charAt(0) == ".") {strbroj = "0" + strbroj};
+                var intbroj = strbroj.length - 1;
+                deczarez(strbroj);
+
+                if (intbroj > 16 && eksp == -1) {
+                    if (decimala == -1) {decimala = 14};
+                    strbroj = izazareza(strbroj.substring(0,intbroj)) + " ";
+                    intbroj = strbroj.length - 1;
+                    deczarez(strbroj)
+                }
+
+                if (decimala >= 0 && decimala != 14) {
+                    if (tocka > 0) {
+                        var odgovor = izazareza(strbroj.substring(0,intbroj))
+                    }
+                    else {
+                        ebroj = strbroj.substring(0,intbroj);
+                        if (decimala > 0) {
+                            ebroj += ".";
+                            for (var n = 0; n < decimala; n++) {
+                                ebroj += "0"
+                            }
+                        }
+                        var odgovor = ebroj
+                    }
+                }
+                else {
+                    decimala = 14;
+                    var odgovor = izazareza(strbroj)
+                }
+
+                if (odgovor.charAt(0) == ".") {odgovor = "0" + odgovor};
+                document.getElementById("rezultat").value = odgovor;
+            }
+
+
+            function deczarez(novibroj) {
+                tocka = 0;
+                eksp = 0;
+
+                tocka = novibroj.indexOf(".");
+                eksp = novibroj.indexOf("e")
+            }
+
+
+            function izazareza(novibroj) {
+                with (Math) {
+
+                    if (eksp == -1) {
+                        var duzina = tocka;
+                        if (duzina == -1) {duzina = novibroj.length};
+                        var desni = "";
+
+                        if (duzina > 16) {
+                            var privremeni = round(novibroj*pow(10, 18)) + " ";
+                            var novie = privremeni.indexOf("e");
+                            var lijevi = (privremeni.substring(0,novie));
+
+                            lijevi = round(lijevi*pow(10, 15))/pow(10, 15) + " ";
+                            desni = (privremeni.substring(novie+2,privremeni.length-1));
+                            desni = "e+" + (desni-18)
+                        }
+                        else {
+                            var lijevi = round(novibroj*pow(10, decimala))/pow(10, decimala) + " "
+                        }
+                    }
+                    else {
+                        var lijevi = novibroj.substring(0,eksp);
+                        var desni = novibroj.substring(eksp,novibroj.length);
+
+                        lijevi = round(lijevi*pow(10, decimala))/pow(10, decimala) + " "
+                    }
+
+                    lijevi = lijevi.substring(0,lijevi.length - 1);
+
+                    if (lijevi.charAt(0) == ".") {lijevi = "0" + lijevi};
+
+                    if (decimala < 14) {
+                        if (lijevi.indexOf(".") == -1 && decimala != 0) {lijevi += "."};
+                        var nula = (tocka + decimala) - (lijevi.length - 1);
+                        if (nula > 0 && decimala > 0) {
+                            for (var n = 0; n < nula; n++) {
+                                lijevi += "0"
+                            }
+                        }
+                    }
+                    return (lijevi + " " + desni)
+                }
+            }
+
+
+            function factorial(n) {
+                if ((n == 0) || (n == 1)) {
+                    return 1
+                }
+                else {
+                    var odgovor = (n * factorial(n-1));
+                    return odgovor
+                }
+            }
+
+
+            function slovo(znak) {
+                var slovo="(ABCDEFGHIKLMNOPRSTUVWXYZ";
+                for (var i=0; i<slovo.length; i++)
+                    if (znak == slovo.charAt(i)) {return true} {return false}
+            }
+
+
+            function operator(znak) {
+                var matoperator="*/+-";
+                for (var i=0; i<matoperator.length; i++)
+                    if (znak == matoperator.charAt(i)) {return true}
+                return false
+            }
+
+            function ubacirezultat(znak) {
+
+                var ubacirezultat="*/+";
+
+                for (var i=0; i<ubacirezultat.length; i++)
+
+                    if (znak == ubacirezultat.charAt(i))
+                {
+
+                    return true;
+                }
+
+                return false;
+            }
+        </script>
+
+
+
+
+            <input type="hidden" id="oldrezultat" name="oldrezultat" value="">
+            <input type="hidden" id="memorija" name="memorija" value="">
+
+            <table class="main_tableshadow" cellspacing="0" cellpadding="0" align="center" style="height:300px;font-family: Futura">
+                <tbody><tr valign="top" >
+                    <td colspan="6">
+                        <table class="main_table" cellspacing="5" style="height:290px;font-family: Futura">
+                            <tbody><tr>
+                                <td colspan="4">
+                                    <input type="text" size="13" id="rezultat" name="rezultat" value="" onfocus="display(document.getElementById(&#39;rezultat&#39;).value)" class="result_box" readonly="readonly" placeholder="Result">
+                                </td>
+                                  <td colspan="2" align="left">
+                                                <font size="2" face="Arial">
+                                                    <input type="radio" id="stupnjevi0" name="stupnjevi" checked="" title="Radians" onclick="document.getElementById(&#39;zadatak&#39;).focus()">
+                                                    <a href="javascript:document.getElementById('racunalo').document.getElementById('stupnjevi0').click()" onmouseover="self.status=&#39;Radians&#39;; return true" style="text-decoration: none;color: #4f4f4f">Rad</a>
+                                                </font>
+                                            </td>
+                            </tr>
+<select id="izaZareza" name="izaZareza" size="1" onchange="if (document.getElementById(&#39;oldrezultat&#39;).value != &#39;&#39;) {zaokruzi(document.getElementById(&#39;oldrezultat&#39;).value)}; document.getElementbyId(&#39;zadatak&#39;).focus()" style="display:none;">
+                                                        <option value="-1" selected="">decimal</option>
+                                                        <option value="0"> 0 </option>
+                                                        <option value="1"> 1 </option>
+                                                        <option value="2"> 2 </option>
+                                                        <option value="3"> 3 </option>
+                                                        <option value="4"> 4 </option>
+                                                        <option value="5"> 5 </option>
+                                                        <option value="6"> 6 </option>
+                                                        <option value="7"> 7 </option>
+                                                        <option value="8"> 8 </option>
+                                                        <option value="9"> 9 </option>
+                                                        <option value="10">10 </option>
+                                                        <option value="11"> 11 </option>
+                                                        <option value="12"> 12 </option>
+                                                        <option value="13"> 13 </option>
+                                                        <option value="14"> 14 </option>
+                                                        <option value="15"> 15 </option>
+                                                    </select>
+                          <!-- <tr>
+                                <td colspan="6">
+                                    <table width="100%" style="font-family: Futura">
+                                        <tbody><tr>
+                                            <td colspan="2" align="left">
+
+                                                <font>
+                                                    <select id="izaZareza" name="izaZareza" size="1" onchange="if (document.getElementById(&#39;oldrezultat&#39;).value != &#39;&#39;) {zaokruzi(document.getElementById(&#39;oldrezultat&#39;).value)}; document.getElementbyId(&#39;zadatak&#39;).focus()">
+                                                        <option value="-1" selected="">decimal</option>
+                                                        <option value="0"> 0 </option>
+                                                        <option value="1"> 1 </option>
+                                                        <option value="2"> 2 </option>
+                                                        <option value="3"> 3 </option>
+                                                        <option value="4"> 4 </option>
+                                                        <option value="5"> 5 </option>
+                                                        <option value="6"> 6 </option>
+                                                        <option value="7"> 7 </option>
+                                                        <option value="8"> 8 </option>
+                                                        <option value="9"> 9 </option>
+                                                        <option value="10">10 </option>
+                                                        <option value="11"> 11 </option>
+                                                        <option value="12"> 12 </option>
+                                                        <option value="13"> 13 </option>
+                                                        <option value="14"> 14 </option>
+                                                        <option value="15"> 15 </option>
+                                                    </select>
+                                                </font>
+                                            </td>
+                                            <td colspan="2" align="left">
+                                                <font size="2" face="Arial">
+                                                    <input type="radio" id="stupnjevi0" name="stupnjevi" checked="" title="Radians" onclick="document.getElementById(&#39;zadatak&#39;).focus()">
+                                                    <a href="javascript:document.getElementById('racunalo').document.getElementById('stupnjevi0').click()" onmouseover="self.status=&#39;Radians&#39;; return true" style="text-decoration: none;color: #4f4f4f">Rad</a>
+                                                </font>
+                                            </td>
+                                            <td colspan="2" align="left">
+                                                <font size="2" face="Arial">
+                                                    <input type="radio" id="stupnjevi1" name="stupnjevi" title="Stupnjevi" onclick="document.getElementById(&#39;zadatak&#39;).focus()">
+                                                    <a href="javascript:document.getElementById('racunalo').document.getElementById('stupnjevi1').click()" onmouseover="self.status=&#39;Degrees&#39;; return true" style="text-decoration: none;color: #4f4f4f">Deg</a></font>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </td>
+                            </tr>-->
+                            <tr>
+                                
+                                            <td colspan="4">
+                                                <input type="text" size="17" name="zadatak" id="zadatak" value="" onchange="enter.click()" onkeydown="if (event.keyCode==13) {enter.click()}" class="zadatak_box" placeholder="Input" style="">
+                                            </td>
+<td colspan="2" align="left">
+                                                <font size="2" face="Arial">
+                                                    <input type="radio" id="stupnjevi1" name="stupnjevi" title="Stupnjevi" onclick="document.getElementById(&#39;zadatak&#39;).focus()">
+                                                    <a href="javascript:document.getElementById('racunalo').document.getElementById('stupnjevi1').click()" onmouseover="self.status=&#39;Degrees&#39;; return true" style="text-decoration: none;color: #4f4f4f">Deg</a></font>
+                                            </td>
+                                        
+                            </tr>
+                            <tr>
+                                <td colspan="6" valign="top">
+                                    <table width="100%" cellspacing="2" style="font-family: Futura">
+                                        <tbody><tr>
+                                            <td>
+                                                <input type="button" name="sqrt" value="sqrt" title="Square root" onclick="izracunaj(3)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="root" value="root" title="Root" onclick="izracunaj(22)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="ln" value="ln" title="Natural logarithm" onclick="izracunaj(5)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="log" value="log" title="Common logarithm" onclick="izracunaj(8)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="tan" value="tan" title="Tangent" onclick="izracunaj(14)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="atan" value="atan" title="Arc tangent" onclick="izracunaj(10)" class="small_button">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="button" name="kvadrat" value="x^2" title="Square" onclick="izracunaj(2)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="potencija" value="x^y" title="Power" onclick="izracunaj(21)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="aln" value="e^x" title="Natural antilogarithm" onclick="izracunaj(6)" class="small_button">
+                                            </td>
+                                            <td align="left">
+                                                <input type="button" name="alog" value="alog" title="Common antilogarithm" onclick="izracunaj(9)" class="small_button" >
+                                            </td>
+                                            <td>
+                                                <input type="button" name="cos" value="cos" title="Cosine" onclick="izracunaj(15)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="acos" value="acos" title="Arc cosine" onclick="izracunaj(11)" class="small_button">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="button" name="sign" value="+/-" title="Change sign" onclick="izracunaj(4)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="1/x" value="1/x" onclick="izracunaj(7)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="fact" value="x!" title="Factorial" onclick="izracunaj(20)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="PI" value="Pi" title="Pi" onclick="dodajBroj(Math.PI)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="sin" value="sin" title="Sine" onclick="izracunaj(16)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="asin" value="asin" title="Arc sine" onclick="izracunaj(12)" class="small_button">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <input type="button" name="7" value="7" onclick="dodajBroj(7)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="8" value="8" onclick="dodajBroj(8)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="9" value="9" onclick="dodajBroj(9)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="djeljeno" value="/" onclick="dodajBroj(&#39;/&#39;)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="ppm" value="ppm" title="Part per million" onclick="izracunaj(18)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="MS" value="MS" title="Memory store" onclick="memory(1)" class="small_button">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="button" name="4" value="4" onclick="dodajBroj(4)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="5" value="5" onclick="dodajBroj(5)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="6" value="6" onclick="dodajBroj(6)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="puta" value="*" onclick="dodajBroj(&#39;*&#39;)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="postotak" value="%" title="Percent" onclick="izracunaj(17)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="MR" value="MR" title="Memory recall" onclick="memory(2)" class="small_button">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="button" name="1" value="1" onclick="dodajBroj(1)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="2" value="2" onclick="dodajBroj(2)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="3" value="3" onclick="dodajBroj(3)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="minus" value="-" onclick="dodajBroj(&#39;-&#39;)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="lijevo" value="(" onclick="dodajBroj(&#39;(&#39;)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="desno" value=")" onclick="dodajBroj(&#39;)&#39;)" class="small_button">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <input type="button" name="0" value="0" onclick="dodajBroj(0)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="." value="." onclick="dodajBroj(&#39;.&#39;)" class="small_button" style="color:red">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="exp" value="E" onclick="dodajBroj(&#39;e&#39;)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="plus" value="+" onclick="dodajBroj(&#39;+&#39;)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="enter" onclick="izracunaj(1)" value="=" class="enter_button" style="background-color: #99FF33;color:black;">
+                                            </td>
+
+<td>
+ <input style="background-color: blue;font-size: 12pt;height: 30px;border: none;font-family: Futura;color: #fff;width: 32px" name="Cls" type="button" value="Clr" title="Clear screen" onclick="memory(3)">
+ </td>
+                                        </tr>                         </tbody></table>
+                                </td>                            </tr>                          
+
+                        </tbody></table>                    </td>                </tr>            </tbody></table>
+<input type="hidden" id="current" value="0">
+
+ 

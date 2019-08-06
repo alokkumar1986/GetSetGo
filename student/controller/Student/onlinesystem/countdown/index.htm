@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- saved from url=(0095)http://www.jqueryscript.net/demo/Modern-Circular-jQuery-Countdown-Timer-Plugin-Final-Countdown/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="./jQuery Final Countdown Demo_files/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="demo.css">
+
+<title>jQuery Final Countdown Demo</title>
+</head>
+
+<body style="">
+<div class="countdown-container container">
+<div class="clock row">
+<div class="clock-item clock-days countdown-time-value col-sm-3 col-md-1" style="width:80px !important;">
+<div class="wrap">
+<div class="inner">
+<div id="canvas_days" class="clock-canvas">
+<div style="position: relative; display: inline-block; width: 262px; height: 262px; " class="kineticjs-content" role="presentation"><canvas style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; position: absolute; top: 0px; left: 0px; width: 262px; height: 262px; background-position: initial initial; background-repeat: initial initial; " width="262" height="262"></canvas></div></div>
+<div class="text">
+<p class="val">00</p>
+<p class="type-hours type-time">DAYS</p>
+</div>
+
+<!-- /.text --> 
+</div>
+<!-- /.inner --> 
+</div>
+<!-- /.wrap --> 
+</div>
+<!-- /.clock-item -->
+
+
+<div class="clock-item clock-hours countdown-time-value col-sm-3 col-md-1" style="width:80px !important;margin-left:-20px !important;">
+<div class="wrap">
+<div class="inner">
+<div id="canvas_hours" class="clock-canvas"><div style="position: relative; display: inline-block; width: 262px; height: 262px; " class="kineticjs-content" role="presentation"><canvas style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; position: absolute; top: 0px; left: 0px; width: 262px; height: 262px; background-position: initial initial; background-repeat: initial initial; " width="262" height="262"></canvas></div></div>
+<div class="text">
+<p class="val">00</p>
+<p class="type-hours type-time">HOURS</p>
+</div>
+<!-- /.text --> 
+</div>
+<!-- /.inner --> 
+</div>
+<!-- /.wrap --> 
+</div>
+<!-- /.clock-item -->
+
+<div class="clock-item clock-minutes countdown-time-value col-sm-3 col-md-1" style="width:80px !important;margin-left:-20px !important;">
+<div class="wrap">
+<div class="inner">
+<div id="canvas_minutes" class="clock-canvas"><div style="position: relative; display: inline-block; width: 262px; height: 262px; " class="kineticjs-content" role="presentation"><canvas style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; position: absolute; top: 0px; left: 0px; width: 262px; height: 262px; background-position: initial initial; background-repeat: initial initial; " width="262" height="262"></canvas></div></div>
+<div class="text">
+<p class="val">45</p>
+<p class="type-minutes type-time">MINUTES</p>
+</div>
+<!-- /.text --> 
+</div>
+<!-- /.inner --> 
+</div>
+<!-- /.wrap --> 
+</div>
+<!-- /.clock-item -->
+
+<div class="clock-item clock-seconds countdown-time-value col-sm-3 col-md-1" style="width:80px !important;margin-left:-20px !important;">
+<div class="wrap">
+<div class="inner">
+<div id="canvas_seconds" class="clock-canvas">
+<div style="position: relative; display: inline-block; width: 262px; height: 262px; " class="kineticjs-content" role="presentation"><canvas style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; position: absolute; top: 0px; left: 0px; width: 262px; height: 262px; background-position: initial initial; background-repeat: initial initial; " width="262" height="262"></canvas></div></div>
+<div class="text">
+<p class="val">00</p>
+<p class="type-seconds type-time">SECONDS</p>
+</div>
+<!-- /.text --> 
+</div>
+<!-- /.inner --> 
+</div>
+<!-- /.wrap --> 
+</div>
+<!-- /.clock-item --> 
+</div>
+<!-- /.clock --> 
+</div>
+<!-- /.countdown-wrapper --> 
+
+<script type="text/javascript" src="jquery-1.11.0.min.js"></script> 
+<script type="text/javascript" src="kinetic.js"></script> 
+<script type="text/javascript" src="jquery.final-countdown.js"></script> 
+<script type="text/javascript">
+	$('.countdown').final_countdown({});
+</script>
+
+
+</body></html>

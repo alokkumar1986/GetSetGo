@@ -1,0 +1,254 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- FONTAWESOME ---------- */
+/* ---------- http://fortawesome.github.com/Font-Awesome/ ---------- */
+/* ---------- http://weloveiconfonts.com/ ---------- */
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+/* ---------- GENERAL ---------- */
+html {
+  height: 100%;
+}
+body {
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	background-color: #FFF;
+	color: #000;
+	font-family: "Varela Round", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+	
+}
+.navbar .navbar-inner {
+  /*height: 70px!important;
+  
+  filter: none;
+  background:#660066;*/
+  background: url(../image/purple.jpg) repeat-x bottom;
+}
+.btn-custom4 {
+  background-color: hsl(110, 56%, 16%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#398f28", endColorstr="#193f11");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#398f28), to(#193f11));
+  background-image: -moz-linear-gradient(top, #398f28, #193f11);
+  background-image: -ms-linear-gradient(top, #398f28, #193f11);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #398f28), color-stop(100%, #193f11));
+  background-image: -webkit-linear-gradient(top, #398f28, #193f11);
+  background-image: -o-linear-gradient(top, #398f28, #193f11);
+  background-image: linear-gradient(#398f28, #193f11);
+  border-color: #193f11 #193f11 hsl(110, 56%, 11%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
+  -webkit-font-smoothing: antialiased;
+}
+footer.white {
+  padding-top: 5px;
+  height: 30px;
+  background:#660066;
+ 
+  text-align: center;
+}
+.navbar {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  
+}
+footer.navbar-fixed-bottom {
+  font-size: 16px;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  line-height: 18px;
+  font-weight: 400;
+  /*background:#660066;*/
+    background: url(../image/purple.jpg) repeat-x top;
+}
+/*input {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	-webkit-appearance: none;
+}*/
+
+/* ---------- LOGIN ---------- */
+
+#login {
+	margin: 140px auto;
+	width: 400px;
+}
+
+#login h2 {
+	background-color: #f95252;
+	-webkit-border-radius: 20px 20px 0 0;
+	-moz-border-radius: 20px 20px 0 0;
+	border-radius: 20px 20px 0 0;
+	color: #fff;
+	font-size: 28px;
+	padding: 20px 26px;
+}
+
+#login h2 span[class*="fontawesome-"] {
+	margin-right: 14px;
+}
+
+#login fieldset {
+	background-color: #FFC;
+	-webkit-border-radius: 0 0 20px 20px;
+	-moz-border-radius: 0 0 20px 20px;
+	border-radius: 0 0 20px 20px;
+	padding: 20px 26px;
+}
+#instruction {
+	margin: 40px auto;
+	width: 800px;
+}
+#instruction  h2 {
+	background-color: #0C9;
+	-webkit-border-radius: 20px 20px 0 0;
+	-moz-border-radius: 20px 20px 0 0;
+	border-radius: 20px 20px 0 0;
+	color: #fff;
+	font-size: 28px;
+	padding: 20px 26px;
+	
+}
+#instruction h2 span[class*="fontawesome-"] {
+	margin-right: 14px;
+}
+
+#instruction fieldset {
+	background-color: #fff;
+	-webkit-border-radius: 0 0 20px 20px;
+	-moz-border-radius: 0 0 20px 20px;
+	border-radius: 0 0 20px 20px;
+	padding: 20px 26px;
+}
+
+#instruction fieldset input[type="submit"] {
+	background-color: #603;
+	color: #fff;
+	display: block;
+	margin: 0 auto;
+	padding: 4px 0;
+	width: 100px;
+}
+.timer {
+    text-align: center;
+    font-size: 3em;
+    padding: .5em;
+    background: #efefef;
+    color: #333;
+}
+.menu {
+    text-align: center;
+}
+.menu .btn {
+    padding: .3em;
+    font-size: 1.2em;
+}
+.overview {
+				background: #FFEC9D;
+				padding: 10px;
+				width: 90%;
+				border: 1px solid #CCCCCC;
+			}
+			
+			.originalTextareaInfo {
+				font-size: 12px;
+				color: #000000;
+				font-family: Tahoma, sans-serif;
+				text-align: right
+			}
+			
+			.warningTextareaInfo {
+				font-size: 12px;
+				color: #FF0000;
+				font-family: Tahoma, sans-serif;
+				text-align: right
+			}
+			
+			#showData {
+				height: 70px;
+				width: 200px;
+				border: 1px solid #CCCCCC;
+				padding: 10px;
+				margin: 10px;
+			}
+#instruction fieldset input[type="submit"]:hover {
+	background-color: #303;
+}
+#login fieldset p {
+	color: #777;
+	margin-bottom: 14px;
+}
+
+#login fieldset p:last-child {
+	margin-bottom: 0;
+}
+
+#login fieldset input {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#login fieldset input[type="text"], #login fieldset input[type="password"] {
+	background-color: #eee;
+	color: #777;
+	padding: 4px 10px;
+	width: 328px;
+}
+
+#login fieldset input[type="submit"] {
+	background-color: #33cc77;
+	color: #fff;
+	display: block;
+	margin: 0 auto;
+	padding: 4px 0;
+	width: 100px;
+}
+
+#login fieldset input[type="submit"]:hover {
+	background-color: #28ad63;
+}
+
+/* -------------------- Dashboard -------------------- */
+
+a.dashboard-module, 
+a.dashboard-module:visited { 
+	width: 152px; 
+	height: 142px; 
+	display: block; 
+	float: left; 
+	background: url(../image/dashboard-module.gif) top left no-repeat; 
+	margin: 12px 12px 12px 0;  
+	text-align: center; 
+	color: #444444; 
+	}
+	
+a.dashboard-module:hover, 
+a.dashboard-module:active { 
+	background-position: bottom left; 
+	text-decoration: none; 
+	color:#0063be; 
+	}
+
+a.dashboard-module img { 
+	margin-top: 20px; 
+	}
+	
+a.dashboard-module span { 
+	margin-top: 10px; 
+	display: block; 
+	}
+

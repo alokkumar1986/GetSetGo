@@ -1,0 +1,121 @@
+
+    .NCPbtn{
+        color: #E5EAF0;
+        font-family: Arial;
+        font-size: x-small;
+        font-style: normal;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        background-color: #466CA3;
+        border-style: outset;    
+    }
+    .tdoutliner{
+        border-left-color : #0A0084;
+        border-left-style : solid;
+        border-left-width : 3px;
+        border-bottom-color : #0A0084;
+        border-bottom-style : solid;
+        border-bottom-width : 3px;
+        border-right-color : #0A0084;
+        border-right-style : solid;
+        border-right-width : 3px;
+        border-top-color : #0A0084;
+        border-top-style : solid;
+        border-top-width : 3px
+    }
+    .tdErrortitle {
+        font-family: Arial,Verdana,sans-serif; 
+        font-size: 15px; 
+        font-weight:bold; 
+        margin-left: 3px;
+        color:#FFFFFF;
+        background-color: #395f9b    
+    }
+    .tdErrordata {
+        font-family: Arial,Verdana,sans-serif;  
+        font-size: 12px; 
+        margin-left: 3px;
+        color:#0A0084
+    }
+    .tdDebugdata {
+        font-family: Arial,Verdana,sans-serif; 
+        font-size: 11px; 
+        margin-left: 3px;
+        color:#0A0084
+}
+
+
+
+.clear_button
+{
+    width:32px;
+    background-color: #fff;
+    font-family: Futura;
+    font-size: 20px;
+    color: #464646;
+    text-align: center;
+    border: 1px solid #ccc;
+   
+}
+.result_box
+{
+    font-weight:bold;
+    color:red;
+    FONT-SIZE: 14pt;
+    HEIGHT: 13px !important;
+    WIDTH: 150px
+}
+.zadatak_box
+{
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold;
+    HEIGHT: 13px !important;
+    WIDTH: 150px;
+}
+.main_table
+{
+    
+    
+    width: 220px;
+
+
+}
+.main_table tr
+{
+margin:0px !important;
+}
+.small_button
+{
+    border: 1px solid #ccc;
+    font-family: Arial;
+    
+    background-color: #fff;
+    font-size: 5px !imporatnt;
+    text-align: center;
+    width: 35px;
+    height: 30px;
+
+}
+.enter_button
+{
+     border: 1px solid #ccc;
+    background-color: #fff;
+    height: 32px;
+    width: 30px;
+}
+.cal_Shadow
+{
+    border: none;
+    background-color: #fff;
+    height: 25px;
+    width: 220px;
+}
+.main_tableshadow
+{
+    border-top: 1px dotted #000;
+
+} 
+#izaZareza{
+height:30px !important;
+}    

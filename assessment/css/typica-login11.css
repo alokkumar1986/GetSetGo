@@ -1,0 +1,699 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|Lato:100,300,400);
+/* ##########  */
+/*   $GLOBAL   */
+/* ##########  */
+/* line 10, ../sass/typica-login.scss */
+html {
+  height: 100%;
+}
+
+/* line 13, ../sass/typica-login.scss */
+body {
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:#FFC;
+}
+@media (min-width: 979px) {
+  /* line 13, ../sass/typica-login.scss */
+  body {
+    padding-top: 50px;
+  }
+}
+
+/* line 21, ../sass/typica-login.scss */
+.blue {
+  color: #447fc8;
+}
+
+/* line 25, ../sass/typica-login.scss */
+.btn-black {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 5px 20px;
+  background-color: #222222;
+  background-image: none;
+  color: black;
+  text-shadow: none;
+}
+/* line 33, ../sass/typica-login.scss */
+.btn-black:hover {
+  background: #333333;
+  color: white;
+}
+
+/* ########### */
+/* $NAVIGATION */
+/* ########### */
+/* line 43, ../sass/typica-login.scss */
+.navbar .brand {
+  margin-top: 3px;
+  padding-bottom: 8px;
+  max-height: 40px;
+  width: auto;
+}
+/* line 49, ../sass/typica-login.scss */
+.navbar .navbar-inner {
+  /*height: 70px!important;
+  
+  filter: none;*/
+  background:#660066;
+}
+/* line 54, ../sass/typica-login.scss */
+.navbar .nav {
+ /*margin-top: 20px;*/
+}
+/* line 56, ../sass/typica-login.scss */
+.navbar .nav > li > a {
+  padding: 10px 10px 11px;
+  color: #333;
+  text-shadow: none;
+}
+/* line 63, ../sass/typica-login.scss */
+.navbar .nav > li > a:hover {
+  color: #111;
+}
+/* line 67, ../sass/typica-login.scss */
+.navbar .nav > li.active > a {
+  background: none;
+  color: #111;
+}
+/* line 70, ../sass/typica-login.scss */
+.navbar .nav > li.active > a:hover {
+  background: none;
+  color: #111;
+}
+
+/* ####### */
+/* $LOGIN  */
+/* ####### */
+/* line 80, ../sass/typica-login.scss */
+#login-wraper {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;  
+  position: absolute;
+  top: 60%;
+  left: 47%;
+  display: block;
+  margin-top: -260px;
+  margin-left: -220px;
+  padding: 25px;
+  height:100%;
+  width:45%;
+  
+  text-align:center;
+}
+#login-wraper5 {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;  
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  display: block;
+  margin-top: -260px;
+
+  padding: 25px;
+  height:100%;
+  width:75%;
+  
+  text-align:center;
+}
+#login-wraper4 .side{
+
+margin-left:65%;
+margin-top:-45px;
+}
+#login-wraper4 {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px; 
+  /* -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);*/ 
+  
+  -webkit-box-shadow: 0 0 12px #000;
+  -moz-box-shadow: 0 0 8px #CCF;
+  box-shadow: 0 0 8px #CCF;
+    background-color:#FFC;  
+  display: block; 
+ 
+  padding: 10px;
+  height:10%;
+  
+  text-align:center;
+}
+#login-wraper1 {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  display: block;
+  margin-top: -350px;
+  margin-left:-3px;
+  padding: 25px;
+  height:100%;
+  width:100%; 
+  text-align: center;
+}
+/* line 97, ../sass/typica-login.scss */
+.login-form legend {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+}
+/* line 102, ../sass/typica-login.scss */
+.login-form .body {
+  /*padding-bottom: 30px;
+  border-bottom: 1px solid #eeeeee;*/
+}
+/* line 106, ../sass/typica-login.scss */
+.login-form .footer {
+  margin-top: 20px;
+}
+/* line 108, ../sass/typica-login.scss */
+.login-form .footer .checkbox.inline {
+  display: inline;
+}
+/* line 110, ../sass/typica-login.scss */
+.login-form .footer .checkbox.inline input[type="checkbox"] {
+  float: none;
+  margin-top: -4px;
+}
+/* line 115, ../sass/typica-login.scss */
+.login-form .footer .btn {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  margin-left: 15px;
+  padding: 7px 25px;
+  background-image: none;
+}
+
+/* ######### */
+/* $REGISTER */
+/* ######### */
+/* line 127, ../sass/typica-login.scss */
+#register-wraper {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+ 
+  margin-top: 25px;
+  margin-bottom: 70px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background: white;
+  text-align: center;
+}
+
+/* line 137, ../sass/typica-login.scss */
+
+
+/* ####### */
+/* $FOOTER */
+/* ####### */
+/* line 185, ../sass/typica-login.scss */
+footer.white {
+  padding-top: 5px;
+  height: 30px;
+  background:#660066;
+  text-align: center;
+}
+
+/* ###### */
+/* $FONTS */
+/* ###### */
+/* navigation */
+/* line 7, D:/DropBox/bootstrap/typica-login/sass/includes/_fonts.scss */
+.navbar {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  
+}
+
+/* login form */
+/* line 17, D:/DropBox/bootstrap/typica-login/sass/includes/_fonts.scss */
+.login-form legend {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: #333333;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* line 24, D:/DropBox/bootstrap/typica-login/sass/includes/_fonts.scss */
+.login-form label {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 20px;
+  color: #333333;
+  font-weight: 300;
+}
+
+/* register form */
+/* line 32, D:/DropBox/bootstrap/typica-login/sass/includes/_fonts.scss */
+#register-form legend {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: #333333;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+/* line 39, D:/DropBox/bootstrap/typica-login/sass/includes/_fonts.scss */
+#register-form label {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-size: 18px;
+  color: #333333;
+  font-weight: 300;
+}
+
+/* register info */
+/* line 48, D:/DropBox/bootstrap/typica-login/sass/includes/_fonts.scss */
+#register-info h1 {
+  font-size: 42px;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  line-height: 55px;
+  font-weight: 700;
+  text-align: right;
+  padding-bottom: 50px;
+  color: white;
+}
+/* line 57, D:/DropBox/bootstrap/typica-login/sass/includes/_fonts.scss */
+#register-info ul {
+  text-align: right;
+  color: white;
+  font-size: 24px;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
+/* footer */
+/* line 66, D:/DropBox/bootstrap/typica-login/sass/includes/_fonts.scss */
+footer.navbar-fixed-bottom {
+  font-size: 16px;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  line-height: 18px;
+  font-weight: 400;
+  background:#660066;
+}
+
+/* ######## */
+/* $QUERIES */
+/* ######## */
+/* Portrait tablet*/
+@media (max-width: 980px) {
+  /* logo margin fix */
+  /* line 8, D:/DropBox/bootstrap/typica-login/sass/includes/_queries.scss */
+  .navbar {
+    height: auto;
+    margin-bottom: 0;
+  }
+  /* line 9, D:/DropBox/bootstrap/typica-login/sass/includes/_queries.scss */
+  .navbar .brand {
+    margin-top: 0;
+  }
+  /* line 14, D:/DropBox/bootstrap/typica-login/sass/includes/_queries.scss */
+  .navbar .navbar-inner {
+    height: auto;
+  }
+
+  /* line 18, D:/DropBox/bootstrap/typica-login/sass/includes/_queries.scss */
+  .navbar .nav > li > a:hover {
+    color: white;
+  }
+
+  /* line 21, D:/DropBox/bootstrap/typica-login/sass/includes/_queries.scss */
+  #login-wraper {
+    position: relative;
+    top: 0;
+    margin-top: 25px;
+  }
+}
+@media (max-width: 495px) {
+  /* line 29, D:/DropBox/bootstrap/typica-login/sass/includes/_queries.scss */
+  #login-wraper {
+    width: auto;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    left: 0;
+  }
+
+  /* line 36, D:/DropBox/bootstrap/typica-login/sass/includes/_queries.scss */
+  #register-form {
+    width: auto;
+  }
+  /* line 38, D:/DropBox/bootstrap/typica-login/sass/includes/_queries.scss */
+  #register-form .control-inline {
+    display: block;
+  }
+  /* line 41, D:/DropBox/bootstrap/typica-login/sass/includes/_queries.scss */
+  #register-form input {
+    display: block;
+    margin: 0 auto;
+  }
+  /* line 44, D:/DropBox/bootstrap/typica-login/sass/includes/_queries.scss */
+  #register-form input.input-huge, #register-form input.input-medium {
+    width: auto;
+    display: block;
+  }
+  /* line 49, D:/DropBox/bootstrap/typica-login/sass/includes/_queries.scss */
+  #register-form .btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
+.btn-custom {
+  background-color: hsl(0, 69%, 22%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b42121", endColorstr="#5e1111");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#b42121), to(#5e1111));
+  background-image: -moz-linear-gradient(top, #b42121, #5e1111);
+  background-image: -ms-linear-gradient(top, #b42121, #5e1111);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b42121), color-stop(100%, #5e1111));
+  background-image: -webkit-linear-gradient(top, #b42121, #5e1111);
+  background-image: -o-linear-gradient(top, #b42121, #5e1111);
+  background-image: linear-gradient(#b42121, #5e1111);
+  border-color: #5e1111 #5e1111 hsl(0, 69%, 17%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
+  -webkit-font-smoothing: antialiased;
+}
+.btn-custom3 {
+  background-color: hsl(145, 62%, 68%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cdf3dd", endColorstr="#7adfa4");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#cdf3dd), to(#7adfa4));
+  background-image: -moz-linear-gradient(top, #cdf3dd, #7adfa4);
+  background-image: -ms-linear-gradient(top, #cdf3dd, #7adfa4);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cdf3dd), color-stop(100%, #7adfa4));
+  background-image: -webkit-linear-gradient(top, #cdf3dd, #7adfa4);
+  background-image: -o-linear-gradient(top, #cdf3dd, #7adfa4);
+  background-image: linear-gradient(#cdf3dd, #7adfa4);
+  border-color: #7adfa4 #7adfa4 hsl(145, 62%, 63%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.33);
+  -webkit-font-smoothing: antialiased;
+}
+.btn-custom4 {
+  background-color: hsl(110, 56%, 16%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#398f28", endColorstr="#193f11");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#398f28), to(#193f11));
+  background-image: -moz-linear-gradient(top, #398f28, #193f11);
+  background-image: -ms-linear-gradient(top, #398f28, #193f11);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #398f28), color-stop(100%, #193f11));
+  background-image: -webkit-linear-gradient(top, #398f28, #193f11);
+  background-image: -o-linear-gradient(top, #398f28, #193f11);
+  background-image: linear-gradient(#398f28, #193f11);
+  border-color: #193f11 #193f11 hsl(110, 56%, 11%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
+  -webkit-font-smoothing: antialiased;
+}
+.btn-custom2 {
+  background-color: hsl(195, 79%, 43%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#56c5eb", endColorstr="#1798c4");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#56c5eb), to(#1798c4));
+  background-image: -moz-linear-gradient(top, #56c5eb, #1798c4);
+  background-image: -ms-linear-gradient(top, #56c5eb, #1798c4);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #56c5eb), color-stop(100%, #1798c4));
+  background-image: -webkit-linear-gradient(top, #56c5eb, #1798c4);
+  background-image: -o-linear-gradient(top, #56c5eb, #1798c4);
+  background-image: linear-gradient(#56c5eb, #1798c4);
+  border-color: #1798c4 #1798c4 hsl(195, 79%, 38%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.33);
+  -webkit-font-smoothing: antialiased;
+}
+dl {clear:both; width:600px;}
+dl.submit {clear:both; width:500px; text-align:center; padding:0 0 0 90px;}
+
+dt {float:left; text-align:right; width:270px; line-height:24px; padding:0 10px 10px 0;}
+dd {float:left; width:500px; margin:0 0 8px 0;}
+#login-wrapera {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  margin-top: -130px;
+  margin-left: -190px;
+  padding: 25px;
+  width: 420px;
+ /* height: 240px;*/
+  background: white;
+  text-align: center;
+}
+#login-wraperb {
+   -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 8px #CC9;
+  -moz-box-shadow: 0 0 8px #CC9;
+  box-shadow: 0 0 8px #CC9;
+ 
+  
+  margin: 0px auto 0px;
+  
+  padding: 25px;
+  width: 88%;
+  text-align: center;
+  background: #9C9;
+}
+.submits{
+	
+	margin-top:3%;
+	right:40%;
+	padding:0 0 0 90px;
+}
+
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 999px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+	text-color:black;
+    cursor: inherit;
+    display: block;
+}
+.input-group-addon{width:10%;}
+
+.input-group.form-control{height:100%;}
+
+
+.sidebarmenu{
+margin:0px 0;
+padding:0;
+width:195px;
+}
+.sidebarmenu a.menuitem{background:url(../image/sidebar_menu_top.gif) no-repeat center top;
+color: #fff;display: block;position: relative;width:185px;height:31px;margin:0 0 5px 0;line-height:31px;padding:0px 0 0 10px;text-decoration: none;
+}
+.sidebarmenu a.menuitem_green{background:url(../image/green_bt.gif) no-repeat center top;
+color: #fff;display: block;position: relative;width:185px;height:31px;margin:0 0 5px 0;line-height:31px;padding:0px 0 0 10px;text-decoration: none;
+}
+.sidebarmenu a.menuitem_red{background:url(../image/red_bt.gif) no-repeat center top;
+color: #fff;display: block;position: relative;width:185px;height:31px;margin:0 0 5px 0;line-height:31px;padding:0px 0 0 10px;text-decoration: none;
+}
+.sidebarmenu a.menuitem:hover{background:url(../image/sidebar_menu_top_a.gif) no-repeat center top;}
+.sidebarmenu a.menuitem_green:hover{background:url(../image/green_bt_a.gif) no-repeat center top;}
+.sidebarmenu a.menuitem_red:hover{background:url(../image/red_bt_a.gif) no-repeat center top;}
+
+.sidebarmenu a.menuitem:visited, .sidebarmenu .menuitem:active{
+color: white;
+}
+.sidebarmenu a.menuitem .statusicon{
+position: absolute;
+top:11px;
+right:7px;
+border: none;
+}
+
+.sidebarmenu div.submenu{
+background: white;
+}
+.sidebarmenu div.submenu ul{ 
+list-style-type: none;
+margin: 0;
+padding: 0 0 5px 0;
+}
+.sidebarmenu div.submenu ul li{
+border-bottom: 1px dotted #bfd1d9;
+}
+.sidebarmenu div.submenu ul li a{
+display: block;
+color: black;
+text-decoration: none;
+padding:5px 0;
+padding-left: 10px;
+}
+.sidebarmenu div.submenu ul li a:hover{
+background: #e2f0ff;
+color: #0e4354;
+}
+
+.sidebar_search{
+background:url(../image/sidebar_menu_top.gif) no-repeat center;
+width:195px;
+height:31px;
+margin:0 0 5px 0;
+}
+
+/*Breadcrumb CSS*/
+.wizard a {
+    padding: 10px 12px 10px;
+    margin-right: 5px;
+    background: #efefef;
+    position: relative;
+    display: inline-block;
+}
+.wizard a:before {
+    width: 0;
+    height: 0;
+    border-top: 20px inset transparent;
+    border-bottom: 20px inset transparent;
+    border-left: 20px solid #fff;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+}
+.wizard a:after {
+    width: 0;
+    height: 0;
+    border-top: 20px inset transparent;
+    border-bottom: 20px inset transparent;
+    border-left: 20px solid #efefef;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: -20px;
+    z-index: 2;
+}
+.wizard a:first-child:before,
+.wizard a:last-child:after {
+    border: none;
+}
+.wizard a:first-child {
+    -webkit-border-radius: 4px 0 0 4px;
+       -moz-border-radius: 4px 0 0 4px;
+            border-radius: 4px 0 0 4px;
+}
+.wizard a:last-child {
+    -webkit-border-radius: 0 4px 4px 0;
+       -moz-border-radius: 0 4px 4px 0;
+            border-radius: 0 4px 4px 0;
+}
+.wizard .badge {
+    margin: 0 5px 0 18px;
+    position: relative;
+    top: -1px;
+}
+.wizard a:first-child .badge {
+    margin-left: 0;
+}
+.wizard .current {
+    background: #007ACC;
+    color: #fff;
+}
+.wizard .current:after {
+    border-left-color: #007ACC;
+}
+
+
+/* ff anti-aliasing bug - http://coderwall.com/p/tpmsta */
+.mywizard li {
+    position: relative;
+    background: #f5f5f5;
+    padding-right: 30px;
+    padding-left: 5px;
+}
+
+.mywizard li a:after, .mywizard li a:before {
+    left: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.mywizard li a:after {
+    border-color: rgba(245, 245, 245, 0);
+    border-left-color: #f5f5f5;
+    border-width: 20px;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: -30px;
+}
+
+.mywizard li a:before {
+    border-color: rgba(255, 255, 255, 0);
+    border-left-color: #fff;
+    border-width: 30px;
+    top: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+}
+.mywizard li .badge {
+    vertical-align: text-bottom;
+    padding-top: 3px;
+}
+/*End Breadcrumb CSS*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

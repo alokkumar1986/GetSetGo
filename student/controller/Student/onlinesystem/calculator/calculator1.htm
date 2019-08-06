@@ -1,0 +1,254 @@
+            <input type="hidden" id="oldrezultat2" name="oldrezultat2" value="">
+            <input type="hidden" id="memorija2" name="memorija2" value="">
+
+            <table class="main_tableshadow" cellspacing="0" cellpadding="0" align="center" style="height:300px;font-family: Futura">
+                <tbody><tr valign="top" >
+                    <td colspan="6">
+                        <table class="main_table" cellspacing="5" style="height:290px;font-family: Futura">
+                            <tbody><tr>
+                                <td colspan="4">
+                                    <input type="text" size="13" id="rezultat2" name="rezultat2" value="" onfocus="display2(document.getElementById(&#39;rezultat2&#39;).value)" class="result_box" readonly="readonly" placeholder="Result">
+                                </td>
+                                  <td colspan="2" align="left">
+                                                <font size="2" face="Arial">
+                                                    <input type="radio" id="stupnjevi02" name="stupnjevi2" checked="" title="Radians" onclick="document.getElementById(&#39;zadatak2&#39;).focus()">
+                                                    <a href="javascript:document.getElementById('racunalo2').document.getElementById('stupnjevi02').click()" onmouseover="self.status=&#39;Radians&#39;; return true" style="text-decoration: none;color: #fff">Rad</a>
+                                                </font>
+                                            </td>
+                            </tr>
+<select id="izaZareza2" name="izaZareza2" size="1" onchange="if (document.getElementById(&#39;oldrezultat2&#39;).value != &#39;&#39;) {zaokruzi2(document.getElementById(&#39;oldrezultat2&#39;).value)}; document.getElementbyId(&#39;zadatak2&#39;).focus()" style="display:none;">
+                                                        <option value="-1" selected="">decimal</option>
+                                                        <option value="0"> 0 </option>
+                                                        <option value="1"> 1 </option>
+                                                        <option value="2"> 2 </option>
+                                                        <option value="3"> 3 </option>
+                                                        <option value="4"> 4 </option>
+                                                        <option value="5"> 5 </option>
+                                                        <option value="6"> 6 </option>
+                                                        <option value="7"> 7 </option>
+                                                        <option value="8"> 8 </option>
+                                                        <option value="9"> 9 </option>
+                                                        <option value="10">10 </option>
+                                                        <option value="11"> 11 </option>
+                                                        <option value="12"> 12 </option>
+                                                        <option value="13"> 13 </option>
+                                                        <option value="14"> 14 </option>
+                                                        <option value="15"> 15 </option>
+                                                    </select>
+                          <!-- <tr>
+                                <td colspan="6">
+                                    <table width="100%" style="font-family: Futura">
+                                        <tbody><tr>
+                                            <td colspan="2" align="left">
+
+                                                <font>
+                                                    <select id="izaZareza" name="izaZareza" size="1" onchange="if (document.getElementById(&#39;oldrezultat&#39;).value != &#39;&#39;) {zaokruzi(document.getElementById(&#39;oldrezultat&#39;).value)}; document.getElementbyId(&#39;zadatak&#39;).focus()">
+                                                        <option value="-1" selected="">decimal</option>
+                                                        <option value="0"> 0 </option>
+                                                        <option value="1"> 1 </option>
+                                                        <option value="2"> 2 </option>
+                                                        <option value="3"> 3 </option>
+                                                        <option value="4"> 4 </option>
+                                                        <option value="5"> 5 </option>
+                                                        <option value="6"> 6 </option>
+                                                        <option value="7"> 7 </option>
+                                                        <option value="8"> 8 </option>
+                                                        <option value="9"> 9 </option>
+                                                        <option value="10">10 </option>
+                                                        <option value="11"> 11 </option>
+                                                        <option value="12"> 12 </option>
+                                                        <option value="13"> 13 </option>
+                                                        <option value="14"> 14 </option>
+                                                        <option value="15"> 15 </option>
+                                                    </select>
+                                                </font>
+                                            </td>
+                                            <td colspan="2" align="left">
+                                                <font size="2" face="Arial">
+                                                    <input type="radio" id="stupnjevi0" name="stupnjevi" checked="" title="Radians" onclick="document.getElementById(&#39;zadatak&#39;).focus()">
+                                                    <a href="javascript:document.getElementById('racunalo').document.getElementById('stupnjevi0').click()" onmouseover="self.status=&#39;Radians&#39;; return true" style="text-decoration: none;color: #4f4f4f">Rad</a>
+                                                </font>
+                                            </td>
+                                            <td colspan="2" align="left">
+                                                <font size="2" face="Arial">
+                                                    <input type="radio" id="stupnjevi1" name="stupnjevi" title="Stupnjevi" onclick="document.getElementById(&#39;zadatak&#39;).focus()">
+                                                    <a href="javascript:document.getElementById('racunalo').document.getElementById('stupnjevi1').click()" onmouseover="self.status=&#39;Degrees&#39;; return true" style="text-decoration: none;color: #4f4f4f">Deg</a></font>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </td>
+                            </tr>-->
+                            <tr>
+                                
+                                            <td colspan="4">
+                                                <input type="text" size="17" name="zadatak2" id="zadatak2" value="" onchange="enter.click()" onkeydown="if (event.keyCode==13) {enter.click()}" class="zadatak_box" placeholder="Input" style="">
+                                            </td>
+<td colspan="2" align="left">
+                                                <font size="2" face="Arial">
+                                                    <input type="radio" id="stupnjevi12" name="stupnjevi2" title="Stupnjevi" onclick="document.getElementById(&#39;zadatak2&#39;).focus()">
+                                                    <a href="javascript:document.getElementById('racunalo2').document.getElementById('stupnjevi12').click()" onmouseover="self.status=&#39;Degrees&#39;; return true" style="text-decoration: none;color: #fff">Deg</a></font>
+                                            </td>
+                                        
+                            </tr>
+                            <tr>
+                                <td colspan="6" valign="top">
+                                    <table width="100%" cellspacing="2" style="font-family: Futura">
+                                        <tbody><tr>
+                                            <td>
+                                                <input type="button" name="sqrt" value="sqrt" title="Square root" onclick="izracunaj2(3)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="root" value="root" title="Root" onclick="izracunaj2(22)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="ln" value="ln" title="Natural logarithm" onclick="izracunaj2(5)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="log" value="log" title="Common logarithm" onclick="izracunaj2(8)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="tan" value="tan" title="Tangent" onclick="izracunaj2(14)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="atan" value="atan" title="Arc tangent" onclick="izracunaj2(10)" class="small_button">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="button" name="kvadrat" value="x^2" title="Square" onclick="izracunaj2(2)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="potencija" value="x^y" title="Power" onclick="izracunaj2(21)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="aln" value="e^x" title="Natural antilogarithm" onclick="izracunaj2(6)" class="small_button">
+                                            </td>
+                                            <td align="left">
+                                                <input type="button" name="alog" value="alog" title="Common antilogarithm" onclick="izracunaj2(9)" class="small_button" >
+                                            </td>
+                                            <td>
+                                                <input type="button" name="cos" value="cos" title="Cosine" onclick="izracunaj2(15)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="acos" value="acos" title="Arc cosine" onclick="izracunaj2(11)" class="small_button">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="button" name="sign" value="+/-" title="Change sign" onclick="izracunaj2(4)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="1/x" value="1/x" onclick="izracunaj2(7)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="fact" value="x!" title="Factorial" onclick="izracunaj2(20)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="PI" value="Pi" title="Pi" onclick="dodajBroj2(Math.PI)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="sin" value="sin" title="Sine" onclick="izracunaj2(16)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="asin" value="asin" title="Arc sine" onclick="izracunaj2(12)" class="small_button">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <input type="button" name="7" value="7" onclick="dodajBroj2(7)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="8" value="8" onclick="dodajBroj2(8)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="9" value="9" onclick="dodajBroj2(9)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="djeljeno" value="/" onclick="dodajBroj2(&#39;/&#39;)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="ppm" value="ppm" title="Part per million" onclick="izracunaj2(18)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="MS" value="MS" title="Memory store" onclick="memory2(1)" class="small_button">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="button" name="4" value="4" onclick="dodajBroj2(4)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="5" value="5" onclick="dodajBroj2(5)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="6" value="6" onclick="dodajBroj2(6)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="puta" value="*" onclick="dodajBroj2(&#39;*&#39;)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="postotak" value="%" title="Percent" onclick="izracunaj2(17)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="MR" value="MR" title="Memory recall" onclick="memory2(2)" class="small_button">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="button" name="1" value="1" onclick="dodajBroj2(1)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="2" value="2" onclick="dodajBroj2(2)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="3" value="3" onclick="dodajBroj2(3)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="minus" value="-" onclick="dodajBroj2(&#39;-&#39;)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="lijevo" value="(" onclick="dodajBroj2(&#39;(&#39;)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="desno" value=")" onclick="dodajBroj2(&#39;)&#39;)" class="small_button">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <input type="button" name="0" value="0" onclick="dodajBroj2(0)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="." value="." onclick="dodajBroj2(&#39;.&#39;)" class="small_button" style="color:red">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="exp" value="E" onclick="dodajBroj2(&#39;e&#39;)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="plus" value="+" onclick="dodajBroj2(&#39;+&#39;)" class="small_button">
+                                            </td>
+                                            <td>
+                                                <input type="button" name="enter" onclick="izracunaj2(1)" value="=" class="enter_button" style="background-color: #99FF33;color:black;">
+                                            </td>
+
+<td>
+ <input style="background-color: blue;font-size: 12pt;height: 30px;border: none;font-family: Futura;color: #fff;width: 32px" name="Cls" type="button" value="Clr" title="Clear screen" onclick="memory2(3)">
+ </td>
+                                        </tr>
+                                    </tbody></table>
+                                </td>
+                            </tr>
+                            
+
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+
+
+
+
+<input type="hidden" id="current" value="0">
+
+ 
