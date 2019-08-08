@@ -3376,9 +3376,9 @@ if (!empty($arrVals)) {
 
 $sql = "CALL $strProcName('$strProcAction', \"$parmaset\")";
 
- // if($strProcAction=="TST"){
+ //  if($strProcAction=="TCT"){
  //  echo $sql;exit;   
- //  }
+ // }
                 
 
 //dbgl('sqls', $sql);

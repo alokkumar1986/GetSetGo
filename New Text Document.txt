@@ -1,0 +1,97 @@
+CREATE DEFINER=`` PROCEDURE `USP_ADMIN_TEST`(IN `P_ACTION` VARCHAR(4), IN `P_VALUES` TEXT CHARSET utf8)
+    NO SQL
+BEGIN 
+
+DECLARE EXIT HANDLER FOR NOT FOUND
+ BEGIN
+ 
+GET DIAGNOSTICS CONDITION 1
+@p1 = RETURNED_SQLSTATE, @p2 = MESSAGE_TEXT,    
+@sqlstate = RETURNED_SQLSTATE, 
+@errno = MYSQL_ERRNO,
+@text  = MESSAGE_TEXT; 
+SET @full_error = CONCAT("NOT FOUND ", @errno, " (", @sqlstate, "): ", @text); 
+    
+    SET @P_STATUS = 4;
+    SET @P_MSG=('Error: Table or column not found');
+    #SELECT  @P_STATUS,@P_MSG;
+ ROLLBACK;
+    INSERT INTO error_log SET `VCH_ACTION_CODE`=P_ACTION,`VCH_TABALE_NAME`='',`VCH_ERROR_DESC`=@full_error,`VCH_SQL_QUERY`='CALL USP_ADMIN_TEST';
+END;
+-- For SQL Warning
+DECLARE EXIT HANDLER FOR SQLWARNING
+ BEGIN
+ 
+    GET DIAGNOSTICS CONDITION 1
+@p1 = RETURNED_SQLSTATE, @p2 = MESSAGE_TEXT,    
+@sqlstate = RETURNED_SQLSTATE, 
+@errno = MYSQL_ERRNO,
+@text  = MESSAGE_TEXT; 
+SET @full_error = CONCAT("SQLWARNING ", @errno, " (", @sqlstate, "): ", @text); 
+   
+    SET @P_STATUS = 4;
+    SET @P_MSG=('ERROR: Unable to process your request in Procedure');
+    #SELECT  @P_STATUS,@P_MSG;
+ ROLLBACK;
+	INSERT INTO error_log SET `VCH_ACTION_CODE`=P_ACTION,`VCH_TABALE_NAME`='',`VCH_ERROR_DESC`=@full_error,`VCH_SQL_QUERY`='CALL USP_ADMIN_TEST';
+END;
+-- For SQL Exception
+DECLARE EXIT HANDLER FOR SQLEXCEPTION 
+BEGIN
+
+GET DIAGNOSTICS CONDITION 1
+@p1 = RETURNED_SQLSTATE, @p2 = MESSAGE_TEXT,    
+@sqlstate = RETURNED_SQLSTATE, 
+@errno = MYSQL_ERRNO,
+@text  = MESSAGE_TEXT; 
+SET @full_error = CONCAT("SQLEXCEPTION ", @errno, " (", @sqlstate, "): ", @text); 
+
+      SET @P_STATUS=4;
+      SET @P_MSG=('ERROR: Unable to process your request in DATABASE'); 
+      
+      #SELECT  @P_STATUS,@P_MSG;
+      ROLLBACK;
+      
+      INSERT INTO `error_log` SET `VCH_ACTION_CODE`=P_ACTION,`VCH_TABALE_NAME`='',`VCH_ERROR_DESC`=@full_error,`VCH_SQL_QUERY`='CALL USP_ADMIN_TEST';
+END;
+
+
+/** Start of params building block **/    
+	SET @vsql = CONCAT('SET ',P_VALUES); 
+    #SELECT @p_rtiId;
+    PREPARE PARAMSTMT from @vsql; 
+    EXECUTE PARAMSTMT;
+    DEALLOCATE PREPARE PARAMSTMT;  
+/** ------------------------------ **/
+
+  
+    IF(P_ACTION='TCT') THEN
+       START TRANSACTION;
+     
+      SET @P_SQL	 = CONCAT('SELECT c1.category_id cat_id1, c1.name name1, c2.category_id cat_id2, c2.name name2 , c3.category_id cat_id3, c3.name name3 FROM test_category c1
+  LEFT JOIN test_category c2
+    ON c2.parent_category_id = c1.category_id
+  LEFT JOIN test_category c3
+    ON c3.parent_category_id = c2.category_id
+WHERE c1.parent_category_id = 0 order by c1.name, c2.name, c3.name desc');  
+
+              
+       PREPARE STMT FROM @P_SQL; 
+	   EXECUTE STMT; 
+       COMMIT;       
+     END IF;
+     
+     
+
+/** Start of debug block **/
+    IF(@p_debug) THEN     
+    	SET @debug_str = CONCAT(P_VALUES, ' ## ', @P_SQL); 
+        IF(CHAR_LENGTH(@debug_str)>0)THEN
+        SELECT @debug_str;
+        ELSE
+    	SELECT 1;       
+        END IF;
+    END IF;    
+/** ------------------------------ **/ 
+
+END
