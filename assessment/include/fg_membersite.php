@@ -19,15 +19,15 @@ class FGMembersite
     //-----Initialization -------
     function FGMembersite()
     {
-        $this->sitename = 'www.example.com';
-        $this->rand_key = '2220iQx5oBk66oVZep222';
+        $this->sitename  = 'www.example.com';
+        $this->rand_key  = '2220iQx5oBk66oVZep222';
     }
     
     function InitDB($host,$uname,$pwd,$database,$tablename)
     {
-        $this->db_host  = $host;
-        $this->username = $uname;
-        $this->pwd  = $pwd;
+        $this->db_host   = $host;
+        $this->username  = $uname;
+        $this->pwd       = $pwd;
         $this->database  = $database;
         $this->tablename = $tablename;
         

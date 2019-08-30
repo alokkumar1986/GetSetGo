@@ -1,4 +1,4 @@
-<?PHP error_reporting(1);
+<?PHP error_reporting(0);
 require_once("class.phpmailer.php");
 require_once("formvalidator.php");
 

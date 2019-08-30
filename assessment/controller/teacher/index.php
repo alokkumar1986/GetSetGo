@@ -294,5 +294,34 @@ $(window).load(function(){
   </div>
 </footer>
 
+ <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">  
+      <div class="modal-content">
+        <div class="modal-body">
+          <h1 align="center" class="msg"></h1>
+        </div>      
+          <p align="center" class="modal-footer"><button type="button" class="btn btn-danger" data-dismiss="modal">Ok</button></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal End -->
+ <!-- Modal -->
+  <div class="modal fade" id="confirmModal" role="dialog">
+    <div class="modal-dialog">  
+      <div class="modal-content">
+        <div class="modal-body">
+          <h1 align="center">Are you sure?</h1>
+        </div>      
+          <p align="center" class="modal-footer pull-center"><button type="button" class="btn btn-success btnConfirmOk">Ok</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal End -->
+
 </body>
 </html>

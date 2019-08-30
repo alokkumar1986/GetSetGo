@@ -1,5 +1,5 @@
 <?PHP
-require_once("fg_membersite.php");
+include("fg_membersite.php");
 
 $fgmembersite = new FGMembersite();
 
@@ -22,5 +22,4 @@ $fgmembersite->InitDB(/*hostname*/'localhost',
 //For better security. Get a random string from this link: http://tinyurl.com/randstr
 // and put it here
 $fgmembersite->SetRandomKey('11111qSRcVS6DrTzrPvr');
-
 ?>
